@@ -13,12 +13,12 @@ function App() {
     <div className="fundo-placar">
        <div className='placar-visitante'>
         <div className="numero-visitante">
-          <h1 id='placar-vsitante'>0</h1>
+          <h1 id='placar-visitante'>0</h1>
         </div>
         <div className='adicionar'>
-        <button id='visitante-botao-1' >+ 1</button>
-        <button id='visitante-botao-2'>+ 2</button>
-        <button id='visitante-botao-3'>+ 3</button>
+        <button id='visitante-botao-1' onClick={incrementarVisitante1}>+ 1</button>
+        <button id='visitante-botao-2' onClick={incrementarVisitante2}>+ 2</button>
+        <button id='visitante-botao-3' onClick={incrementarVisitante3}>+ 3</button>
         </div>
          </div>
        <div className='placar-casa'>
@@ -27,8 +27,8 @@ function App() {
         </div>
         <div className='adicionar'>
         <button id='casa-botao-1' onClick={incrementarCasa1}>+ 1</button>
-        <button id='casa-botao-2'>+ 2</button>
-        <button id='casa-botao-3'>+ 3</button>
+        <button id='casa-botao-2' onClick={incrementarCasa2}>+ 2</button>
+        <button id='casa-botao-3' onClick={incrementarCasa3}>+ 3</button>
         </div>
         </div>
     </div>
