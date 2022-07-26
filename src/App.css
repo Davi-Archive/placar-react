@@ -55,8 +55,8 @@ button{
 }
 
 button:hover{
-  font-size: 2.7rem;
   background-color: #322d7c;
+  transform:skewX(-15deg)
 }
 
 button::after{
