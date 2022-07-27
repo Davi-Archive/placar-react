@@ -4,9 +4,12 @@ import {incrementarCasa1,
         incrementarCasa3,
         incrementarVisitante1,
         incrementarVisitante2,
-        incrementarVisitante3,
+        incrementarVisitante3
+                 } from './button.js'
 
-           } from './button.js'
+export var placarCasa = document.getElementById('placar-casa');
+export var placarVisitante = document.getElementById('placar-visitante');
+
 
 function App() {
   return (
@@ -15,10 +18,10 @@ function App() {
        <div className='placar-visitante'>
         <h2>Visitante</h2>
         <div className="numero-visitante">
-          <h1 id='placar-visitante'>0</h1>
+          <span id='placar-visitante'><h1>0</h1></span>
         </div>
         <div className='adicionar'>
-        <button id='visitante-botao-1' onClick={incrementarVisitante1} >+ 1</button>
+        <button id='visitante-botao-1' onClick={incrementarVisitante1}>+ 1</button>
         <button id='visitante-botao-2' onClick={incrementarVisitante2}>+ 2</button>
         <button id='visitante-botao-3' onClick={incrementarVisitante3}>+ 3</button>
         </div>
@@ -26,7 +29,7 @@ function App() {
        <div className='placar-casa'>
        <h2>Casa</h2>
         <div className="numero-casa">
-          <h1 id='placar-casa'>0</h1>
+          <span id='placar-casa'><h1>0</h1></span>
         </div>
         <div className='adicionar'>
         <button id='casa-botao-1' onClick={incrementarCasa1}>+ 1</button>

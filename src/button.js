@@ -1,30 +1,24 @@
-var resultadoCasa = 0;
-var resultadoVisitante = 0;
-var placarVisitante = document.getElementById('placar-visitante');
-var placarCasa = document.getElementById('placar-casa');
+import { placarCasa,placarVisitante } from './App.js'
 
-export function incrementarVisitante1(){
-    resultadoVisitante += 1;
-    return placarVisitante.innerText = resultadoVisitante
+let resultadoCasa = 0;
+let resultadoVisitante = 0;
+
+export function incrementarVisitante1() {
+    return placarVisitante.innerHTML += 1;
 }
-export function incrementarVisitante2(){
-    resultadoVisitante += 2;
-    return placarVisitante.innerText = resultadoVisitante
+export function incrementarVisitante2() {
+    return placarVisitante.innerHTML = resultadoVisitante += 2;
 }
-export function incrementarVisitante3(){
-    resultadoVisitante += 3;
-    return placarVisitante.innerText = resultadoVisitante
+export function incrementarVisitante3() {
+    return placarVisitante.innerHTML = resultadoVisitante += 3;
 }
 
-export function incrementarCasa1(){
-    resultadoCasa += 1;
-    return placarCasa.innerText = resultadoCasa;
+export function incrementarCasa1() {
+    return placarCasa.innerHTML = resultadoCasa += 1;
 }
-export function incrementarCasa2(){
-    resultadoCasa += 1;
-    return placarCasa.innerText = resultadoCasa;
+export function incrementarCasa2() {
+    return placarCasa.innerHTML = resultadoCasa += 2;
 }
-export function incrementarCasa3(){
-    resultadoCasa += 1;
-    return placarCasa.innerText = resultadoCasa;
+export function incrementarCasa3() {
+    return placarCasa.innerHTML = resultadoCasa += 3;
 }
