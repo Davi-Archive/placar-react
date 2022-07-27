@@ -2,6 +2,7 @@
 body{
   background-color: #282c34;
 }
+
 .fundo-placar {
   position: absolute;
   text-align: center;
@@ -22,6 +23,7 @@ body{
   padding: 0 5%;
 
 }
+input,
 .placar-casa,
 .placar-visitante{
   background-color: #444;
