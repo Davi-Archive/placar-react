@@ -1,34 +1,37 @@
 import './App.css';
-import { incrementarCasa , incrementarVisitante } from './button.js'
+import {incrementarCasa1,
+        incrementarCasa2,
+        incrementarCasa3,
+        incrementarVisitante1,
+        incrementarVisitante2,
+        incrementarVisitante3,
 
-// placar <h1>
-// let placarVisitante = document.getElementById('placar-visitante');
-// let placarCasa = document.getElementById('placar-casa');
-// let resultadoCasa = 1;
-// let resultadoVisitante = 1;
+           } from './button.js'
 
 function App() {
   return (
     <body>
     <div className="fundo-placar">
        <div className='placar-visitante'>
+        <h2>Visitante</h2>
         <div className="numero-visitante">
-          <h1 id='placar-visitante'>{count}</h1>
+          <h1 id='placar-visitante'>0</h1>
         </div>
         <div className='adicionar'>
-        <button id='visitante-botao-1' onClick={() => setCount(1)} >+ 1</button>
-        <button id='visitante-botao-2' onClick={incrementarVisitante}>+ 2</button>
-        <button id='visitante-botao-3' onClick={incrementarVisitante}>+ 3</button>
+        <button id='visitante-botao-1' onClick={incrementarVisitante1} >+ 1</button>
+        <button id='visitante-botao-2' onClick={incrementarVisitante2}>+ 2</button>
+        <button id='visitante-botao-3' onClick={incrementarVisitante3}>+ 3</button>
         </div>
          </div>
        <div className='placar-casa'>
+       <h2>Casa</h2>
         <div className="numero-casa">
           <h1 id='placar-casa'>0</h1>
         </div>
         <div className='adicionar'>
-        <button id='casa-botao-1' onClick={incrementarCasa}>+ 1</button>
-        <button id='casa-botao-2' onClick={incrementarCasa}>+ 2</button>
-        <button id='casa-botao-3' onClick={incrementarCasa}>+ 3</button>
+        <button id='casa-botao-1' onClick={incrementarCasa1}>+ 1</button>
+        <button id='casa-botao-2' onClick={incrementarCasa2}>+ 2</button>
+        <button id='casa-botao-3' onClick={incrementarCasa3}>+ 3</button>
         </div>
         </div>
     </div>
