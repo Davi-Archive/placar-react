@@ -8,6 +8,7 @@ export default function Botao() {
   const [resultadoCasa, setResultadoCasa] = useState(0)
   const [fator, setFator] = useState(true)
   const [message, setMessage] = useState("POSITIVO")
+  const [sinal, setSinal] = useState("+")
 
   useEffect(() => {
     switch (message) {
@@ -24,13 +25,29 @@ export default function Botao() {
     }
   }, [message]);
 
+useEffect(() => {
+    switch (sinal) {
+      case "-":
+
+        setSinal("-");
+        break;
+        case "+":
+        setSinal("+");
+        break;
+      default:
+        break;
+    }
+  }, [sinal]);
+
   function alteraPlacar() {
     if(fator){
       setFator(false)
       setMessage('Negativo')
+      setSinal('-')
     } else {
       setFator(true)
       setMessage('Positivo')
+      setSinal('+')
     }
   }
 
@@ -60,9 +77,9 @@ export default function Botao() {
             <h1 id='placar-visitante'>{resultadoVisitante}</h1>
           </div>
           <div className='adicionar'>
-            <button id='visitante-botao-1' onClick={() => incrementarVisitante(1)}>+ 1</button>
-            <button id='visitante-botao-2' onClick={() => incrementarVisitante(2)}>+ 2</button>
-            <button id='visitante-botao-3' onClick={() => incrementarVisitante(3)}>+ 3</button>
+            <button className="placar-botoes-cor" id='visitante-botao-1' onClick={() => incrementarVisitante(1)}>{sinal} 1</button>
+            <button className="placar-botoes-cor" id='visitante-botao-2' onClick={() => incrementarVisitante(2)}>{sinal} 2</button>
+            <button className="placar-botoes-cor" id='visitante-botao-3' onClick={() => incrementarVisitante(3)}>{sinal} 3</button>
           </div>
         </div>
 
@@ -72,9 +89,9 @@ export default function Botao() {
             <h1 id='placar-casa'>{resultadoCasa}</h1>
           </div>
           <div className='adicionar'>
-            <button id='casa-botao-1' onClick={() => incrementarCasa(1)}>+ 1</button>
-            <button id='casa-botao-2' onClick={() => incrementarCasa(2)}>+ 2</button>
-            <button id='casa-botao-3' onClick={() => incrementarCasa(3)}>+ 3</button>
+            <button className="placar-botoes-cor" id='casa-botao-1' onClick={() => incrementarCasa(1)}>{sinal} 1</button>
+            <button className="placar-botoes-cor" id='casa-botao-2' onClick={() => incrementarCasa(2)}>{sinal} 2</button>
+            <button className="placar-botoes-cor" id='casa-botao-3' onClick={() => incrementarCasa(3)}>{sinal} 3</button>
           </div>
         </div>
       </div>
