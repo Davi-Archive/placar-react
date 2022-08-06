@@ -3,11 +3,31 @@ body{
   background-color: #282c34;
 }
 
+.alterador-placar{
+  display: flex;
+  flex: 0 0 100%;
+  justify-content: center;
+}
+
+#reseta-placar{
+  background-color: #14e74cda;
+  font-size: 4rem;
+}
+
+.resetador-placar{
+    display: flex;
+    flex: 0 0 100%;
+    justify-content: center;
+}
+
+#altera-placar{
+  background-color: #00ffff;
+}
+
+
+
 .fundo-placar {
-  position: absolute;
   text-align: center;
-  top: 10%;
-  left: 0%;
   width: auto;
   background-color: #282c34;
   display: flex;
