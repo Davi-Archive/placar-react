@@ -1,5 +1,8 @@
 import './App.scss';
 import React, { useState, useEffect } from 'react';
+import AlteraPlacar from './components/AlteraPlacar';
+import PlacarVisitante from './components/Placarvisitante';
+import PlacarCasa from './components/Placarcasa';
 
 
 
@@ -26,13 +29,13 @@ export default function Botao() {
     }
   }, [message, ativo]);
 
-useEffect(() => {
+  useEffect(() => {
     switch (sinal) {
       case "-":
 
         setSinal("-");
         break;
-        case "+":
+      case "+":
         setSinal("+");
         break;
       default:
@@ -41,7 +44,7 @@ useEffect(() => {
   }, [sinal]);
 
   function alteraPlacar() {
-    if(fator){
+    if (fator) {
       setFator(false)
       setMessage('Negativo')
       setSinal('-')
@@ -52,7 +55,7 @@ useEffect(() => {
     }
   }
 
-  function resetarPlacar (){
+  function resetarPlacar() {
     setResultadoCasa(0)
     setResultadoVisitante(0)
   }
@@ -67,42 +70,25 @@ useEffect(() => {
       (setResultadoCasa(resultadoCasa - num))
   }
   return (
-    <div className='wrapper'>
-      <div className='alterador-placar'>
-        <button
-        id='altera-placar'
-        onClick={alteraPlacar}
-        style={{backgroundColor: ativo ? '#b94545' : '#00ffff'}}
-        >{message}</button>
-      </div>
-      <div className="fundo-placar">
-        <div className='placar-visitante'>
-          <h2>Visitante</h2>
-          <div className="numero-visitante">
-            <h1 id='placar-visitante'>{resultadoVisitante}</h1>
-          </div>
-          <div className='adicionar'>
+    <>
+      <div className='wrapper'>
+        <AlteraPlacar ativo={ativo} alteraPlacar={alteraPlacar} message={message}></AlteraPlacar>
+        <div className="fundo-placar">
+          <PlacarVisitante resultadoVisitante={resultadoVisitante}>
             <button className="placar-botoes-cor" id='visitante-botao-1' onClick={() => incrementarVisitante(1)}>{sinal} 1</button>
             <button className="placar-botoes-cor" id='visitante-botao-2' onClick={() => incrementarVisitante(2)}>{sinal} 2</button>
             <button className="placar-botoes-cor" id='visitante-botao-3' onClick={() => incrementarVisitante(3)}>{sinal} 3</button>
-          </div>
-        </div>
-
-        <div className='placar-casa'>
-          <h2>Casa</h2>
-          <div className="numero-casa">
-            <h1 id='placar-casa'>{resultadoCasa}</h1>
-          </div>
-          <div className='adicionar'>
+          </PlacarVisitante>
+          <PlacarCasa resultadoCasa={resultadoCasa}>
             <button className="placar-botoes-cor" id='casa-botao-1' onClick={() => incrementarCasa(1)}>{sinal} 1</button>
             <button className="placar-botoes-cor" id='casa-botao-2' onClick={() => incrementarCasa(2)}>{sinal} 2</button>
             <button className="placar-botoes-cor" id='casa-botao-3' onClick={() => incrementarCasa(3)}>{sinal} 3</button>
-          </div>
+          </PlacarCasa>
+        </div>
+        <div className='resetador-placar'>
+          <button id='reseta-placar' onClick={resetarPlacar}>Resetar</button>
         </div>
       </div>
-      <div className='resetador-placar'>
-        <button id='reseta-placar' onClick={resetarPlacar}>Resetar</button>
-      </div>
-    </div>
+    </>
   );
 }
