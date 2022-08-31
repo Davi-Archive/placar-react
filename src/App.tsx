@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import React, { useState, useEffect } from 'react';
 
 
@@ -9,21 +9,22 @@ export default function Botao() {
   const [fator, setFator] = useState(true)
   const [message, setMessage] = useState("POSITIVO")
   const [sinal, setSinal] = useState("+")
+  const [ativo, setAtivo] = useState(true)
 
   useEffect(() => {
     switch (message) {
       case "Negativo":
         setMessage("NEGATIVO");
-        document.getElementById('altera-placar').style.backgroundColor = '#b94545';
+        setAtivo(!ativo);
         break;
       case "Positivo":
         setMessage("POSITIVO");
-        document.getElementById('altera-placar').style.backgroundColor = '#00ffff';
+        setAtivo(!ativo);
         break;
       default:
         break;
     }
-  }, [message]);
+  }, [message, ativo]);
 
 useEffect(() => {
     switch (sinal) {
@@ -56,19 +57,23 @@ useEffect(() => {
     setResultadoVisitante(0)
   }
 
-  function incrementarVisitante(num) {
+  function incrementarVisitante(num: number) {
     fator ? (setResultadoVisitante(resultadoVisitante + num)) :
       (setResultadoVisitante(resultadoVisitante - num))
   }
 
-  function incrementarCasa(num) {
+  function incrementarCasa(num: number) {
     fator ? (setResultadoCasa(resultadoCasa + num)) :
       (setResultadoCasa(resultadoCasa - num))
   }
   return (
     <div className='wrapper'>
       <div className='alterador-placar'>
-        <button id='altera-placar' onClick={alteraPlacar}>{message}</button>
+        <button
+        id='altera-placar'
+        onClick={alteraPlacar}
+        style={{backgroundColor: ativo ? '#b94545' : '#00ffff'}}
+        >{message}</button>
       </div>
       <div className="fundo-placar">
         <div className='placar-visitante'>
