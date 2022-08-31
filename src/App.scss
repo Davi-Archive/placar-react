@@ -1,89 +1,17 @@
+@import "~bootstrap/scss/bootstrap";
 
-body{
-  background-color: #282c34;
+body {
+	background-color: #282c34;
 }
-
-.alterador-placar{
-  display: flex;
-  flex: 0 0 100%;
-  justify-content: center;
+#reseta-placar,
+#altera-placar {
+	font-size: 3rem;
 }
-
-.placar-botoes-cor{
-
-}
-#reseta-placar{
-  background-color: #14e74cda;
-  font-size: 4rem;
-}
-
-.resetador-placar{
-    display: flex;
-    flex: 0 0 100%;
-    justify-content: center;
-}
-
-#altera-placar{
-  background-color: #00ffff;
-}
-
-
 
 .fundo-placar {
-  text-align: center;
-  width: auto;
-  background-color: #282c34;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-  font-size: calc(10px + 2vmin);
-  color: white;
-  border: 5px solid rgba(255, 255, 255, 0);
-  flex-wrap: nowrap;
-  padding-bottom: 2%;
-  border-radius: 10px;
-  padding: 0 5%;
-
-}
-input,
-.placar-casa,
-.placar-visitante{
-  background-color: #444;
-  padding: 0 100px 0 100px;
-  margin: 0 1% 0 1%;
-  border-radius: 10px;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-.numero-visitante,
-.numero-casa{
-  font-size: 5rem;
-  background-color: #000000;
-  border-radius: 30px;
-  margin: -15%;
-}
-
-.adicionar{
-  display: inline-flex;
-  flex-direction: row;
-}
-
-button{
-  background-color: #7d7d7d;
-  padding: 5px 30px 5px 30px;
-  margin: 10px;
-  font-size: 2.5rem;
-  border-radius: 10px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  white-space: nowrap;
-}
-
-button:hover{
-  background-color: #322d7c;
-  transform:skewX(-15deg)
-}
-
-button::after{
-  background-color: #753d3d;
+	display: flex;
+	width: 100%;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
 }
