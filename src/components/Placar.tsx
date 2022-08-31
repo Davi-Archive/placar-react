@@ -1,4 +1,5 @@
 import Card from 'react-bootstrap/card'
+import '../App.scss'
 
 interface PlacarProps{
 resultadoPlacar: number;
@@ -10,7 +11,8 @@ function Placar({nomePlacar, resultadoPlacar, children}: PlacarProps){
 
     return(
         <>
-          <Card className="m-4 xl" style={{ width: '19rem'}}>
+        <div className='placar'>
+          <Card className="m-4" style={{ width: '19rem'}}>
                 <Card.Body>
                     <Card.Title className='xxl'>{nomePlacar}</Card.Title>
                     <Card.Subtitle className="mb-2"><h1> {resultadoPlacar} </h1></Card.Subtitle>
@@ -19,6 +21,7 @@ function Placar({nomePlacar, resultadoPlacar, children}: PlacarProps){
                     </Card.Text>
                 </Card.Body>
             </Card>
+        </div>
         </>
      )
 }

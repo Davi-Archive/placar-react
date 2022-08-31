@@ -91,8 +91,6 @@ export default function Botao() {
         <div className="fundo-placar">
           <Container>
             <Row>
-              <Col xs>
-              </Col>
               <Col auto>
                 <Placar nomePlacar="Placar Visitante" resultadoPlacar={resultadoVisitante}>
                   <ListGroup horizontal>
@@ -123,8 +121,6 @@ export default function Botao() {
                     </ListGroup.Item>
                   </ListGroup>
                 </Placar>
-              </Col>
-              <Col xs>
               </Col>
             </Row>
 
