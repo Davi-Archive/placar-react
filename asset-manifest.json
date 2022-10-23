@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/placar/static/css/main.e8902cda.css",
-    "main.js": "/placar/static/js/main.b3669af3.js",
-    "index.html": "/placar/index.html",
-    "main.e8902cda.css.map": "/placar/static/css/main.e8902cda.css.map",
-    "main.b3669af3.js.map": "/placar/static/js/main.b3669af3.js.map"
+    "main.css": "/placar-react/static/css/main.e8902cda.css",
+    "main.js": "/placar-react/static/js/main.b3669af3.js",
+    "index.html": "/placar-react/index.html",
+    "main.e8902cda.css.map": "/placar-react/static/css/main.e8902cda.css.map",
+    "main.b3669af3.js.map": "/placar-react/static/js/main.b3669af3.js.map"
   },
   "entrypoints": [
     "static/css/main.e8902cda.css",
