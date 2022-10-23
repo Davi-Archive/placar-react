@@ -1,7 +1,7 @@
 {
   "name": "placar",
   "version": "0.1.0",
-  "homepage": "https://davi38.github.io/placar/",
+  "homepage": "https://d1av.github.io/placar/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
