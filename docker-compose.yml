@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  app:
+      image: node:19
+      container_name: pet-shop-site
+      tty: true
+      build:
+        context: .
+        target: development
+      restart: always
+      working_dir: /app
+      volumes:
+      - ./src:/app/src
+      ports:
+      - 3000:3000
